@@ -79,5 +79,5 @@ module "sandbox_account_02" {
     custom2 = "b"
   }
 
-  account_customizations_name = "sandbox-customizations"
+  account_customizations_name = "sandbox-customizations-2"
 }
