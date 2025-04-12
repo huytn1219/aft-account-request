@@ -13,6 +13,7 @@ terraform {
     kms_key_id     = "{{ kms_key_id }}"
     assume_role = {
       role_arn       = "{{ aft_admin_role_arn }}"
+    }
   }
 }
 {% else -%}
