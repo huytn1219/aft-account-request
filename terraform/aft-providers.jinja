@@ -3,5 +3,10 @@
 
 provider "tfe" {
  hostname = "app.terraform.io"
- token    = {{ api_token }}
+ token    = data.aws_secretsmanager_secret_version.tfe_token_secret.secret_string
+}
+
+
+data "aws_secretsmanager_secret_version" "tfe_token_secret" {
+ secret_id = "/aft/config/terraform/token"
 }
