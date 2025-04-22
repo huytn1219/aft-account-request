@@ -18,7 +18,7 @@ terraform {
 }
 {% else -%}
 terraform {
-    backend "remote" {
+    cloud {
         organization = "{{ terraform_org_name }}"
         workspaces {
         name = "{{ terraform_workspace_name }}"
