@@ -23,9 +23,6 @@ terraform {
         workspaces {
         name = "{{ terraform_workspace_name }}"
         }
-        assume_role = {
-      role_arn       = "arn:aws:iam::422185157735:role/tfe-oidc"
-    }
     }
 }
 {% endif %}
